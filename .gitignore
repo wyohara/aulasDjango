@@ -2,3 +2,4 @@ venv
 .idea
 meu_primeiro_projeto/db.sqlite3
 meu_primeiro_projeto/media/
+.env
