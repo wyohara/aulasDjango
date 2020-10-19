@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from .views import hello, articles,find_name
+from clientes import urls as clients_urls # importando as urls da app
+
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,5 +28,6 @@ urlpatterns = [
     path('hello/', hello), # httpresponse simples
     path('pessoa/<str:nome>', find_name), # buscando uma pessoa no banco
     path('admin/', admin.site.urls),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('person/', include(clients_urls)), # incluindo no arquivo url
 
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
