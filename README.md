@@ -22,4 +22,10 @@
  - A estrutura de models do django pode ser vista [aqui](https://docs.djangoproject.com/en/3.1/topics/db/models/)
  - Dentro da pasta base do projeto em ```settings.py``` existe o campo ```DATABASES``` que define o banco de dados. por padrão se usa  sqlite3
  - O banco de dados é criado na forma de migrations, assim para criar uma migration é usado o comando ```python manage.py makemigrations``` e para aplicar as migrations é usado ```python manage.py migrate```
+
+## Aula 4
+ - Para criar um superadmin no django usa-se ```python manage.py createsuperuser``` que é acesso pela url _/admin_
+ - para registrar os models criados em uma app basta acessar o arquivo _admin.py_ e registrar o model com ```admin.site.register(Cliente)```
+ 
+ ## Aula 5
  

@@ -8,3 +8,6 @@ class Cliente(models.Model):
     age = models.IntegerField()
     salary = models.DecimalField(decimal_places=2, max_digits=10)
     bio = models.TextField()
+
+    def __str__(self):  # exibindo um texto no admin do banco de dados
+        return f"Cliente {self.first_name} {self.last_name}"
