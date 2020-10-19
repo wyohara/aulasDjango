@@ -2,7 +2,8 @@
 
 ## Aula 1
  - Estrutura do lifecycle do django [aqui](/imagens_adicionais/lifecycle.png)
- - Para iniciar projeto ```django-admin startproject meu_primeiro_projeto```
+ - Para iniciar projeto ```django-admin startproject meu_primeiro_projeto``` e será criado uma subpasta com as configurações
+    - obs se digitar ```django-admin startproject meu_primeiro_projeto. ``` todos os arquivos de configuração ficarão na pasta raiz
  - Para rodar o servidor localmente ```python manage.py runserver```
  
  Estrutura do django:
@@ -14,3 +15,11 @@
 
 ## Aula 2
  - Estrutura de [urls do Django](https://docs.djangoproject.com/en/3.1/topics/http/urls/)
+
+## Aula 3
+ - Criando uma app para uma funcionalidade específica ```python manage.py startapp clientes```
+ - As novas apps são registradas em INSTALLED_APPS dentro do arquivo ```settings.py```
+ - A estrutura de models do django pode ser vista [aqui](https://docs.djangoproject.com/en/3.1/topics/db/models/)
+ - Dentro da pasta base do projeto em ```settings.py``` existe o campo ```DATABASES``` que define o banco de dados. por padrão se usa  sqlite3
+ - O banco de dados é criado na forma de migrations, assim para criar uma migration é usado o comando ```python manage.py makemigrations``` e para aplicar as migrations é usado ```python manage.py migrate```
+ 
