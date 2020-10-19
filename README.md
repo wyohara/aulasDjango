@@ -36,3 +36,7 @@
 ]``` e crie a pasta estática na raiz do projeto.
  - para ler os arquivos estáticos, no início do html insira ```{% load static %}``` e chame os arquivos estáticos no modelo ```<link rel="stylesheet" href="{% static '/style.css' %}">```
  
+ ## Aula 6
+  - Para criar arquivos de media adicione a url da media em _settings.py_ no formato ```
+MEDIA_URL = '/media/'``` e uma URL para acessar os arquivos de media em ```MEDIA_ROOT = 'media'```
+  - Durante o desenvolvimento os arquivos de media podem ser servidos [por este modo](https://docs.djangoproject.com/en/3.1/howto/static-files/#serving-files-uploaded-by-a-user-during-development)

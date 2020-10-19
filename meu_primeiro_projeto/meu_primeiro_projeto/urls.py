@@ -17,9 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from .views import hello, articles,find_name
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('articles/<int:year>', articles), # retornando o ano da url
     path('hello/', hello), # httpresponse simples
     path('pessoa/<str:nome>', find_name), # buscando uma pessoa no banco
     path('admin/', admin.site.urls),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
