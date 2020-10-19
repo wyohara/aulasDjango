@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 '''
 Arquivo contendo as views do site
@@ -8,7 +9,7 @@ toda view tem um httpResponse
 
 
 def hello(request):
-    return HttpResponse("hello")
+    return render(request, 'index.html')
 
 
 def articles(request, year):
@@ -25,7 +26,6 @@ def ler_pessoa_banco(nome):
     ]
     # listando as pessoas
     for pessoa in lista_nomes:
-        print(pessoa)
         if pessoa['nome'] == nome:
             return pessoa
 
@@ -36,6 +36,7 @@ def find_name(request, nome):
     # pesquisando a pessoa e retornando os dados
     pessoa = ler_pessoa_banco(nome)
     if pessoa['idade'] == 0:
-        return HttpResponse("Pessoa não achada")
+        return render(request, "pessoa.html")
     else:
-        return HttpResponse(f"Pessoa foi achada, seu nome é {pessoa['nome']} e tem {pessoa['idade']}")
+        return render(request, "pessoa.html", {'idade': pessoa['idade'], "nome": pessoa['nome']})  # passando a url com
+        # o json de idade

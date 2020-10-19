@@ -1,7 +1,7 @@
 # Aulas de django
 
 ## Aula 1
- - Estrutura do lifecycle do django [aqui](/imagens_adicionais/lifecycle.png)
+ - Estrutura do lifecycle do django ![aqui](/imagens_adicionais/lifecycle.png)
  - Para iniciar projeto ```django-admin startproject meu_primeiro_projeto``` e será criado uma subpasta com as configurações
     - obs se digitar ```django-admin startproject meu_primeiro_projeto. ``` todos os arquivos de configuração ficarão na pasta raiz
  - Para rodar o servidor localmente ```python manage.py runserver```
@@ -28,4 +28,11 @@
  - para registrar os models criados em uma app basta acessar o arquivo _admin.py_ e registrar o model com ```admin.site.register(Cliente)```
  
  ## Aula 5
+ - Para adicionar um template basta ir em _settings.py_ e adicionar a pasta de template em ```TEMPLATES['DIRS]```
+ - A descrição das templates estão [aqui](https://docs.djangoproject.com/en/3.1/topics/templates/)
+ - Os comandos embutidos no template do django estão disponíveis [aqui](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/)
+ - Para adicionar os arquivos estaticos adicione na pasta _settings.py_ a pasta de arquivos estaticos em ```STATICFILES_DIRS = [
+    'static_files',
+]``` e crie a pasta estática na raiz do projeto.
+ - para ler os arquivos estáticos, no início do html insira ```{% load static %}``` e chame os arquivos estáticos no modelo ```<link rel="stylesheet" href="{% static '/style.css' %}">```
  
