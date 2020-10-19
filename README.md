@@ -5,3 +5,9 @@ from clientes import urls as clients_urls``` e dentro das urlpatterns adicionou 
  - para recuperar os dados basta chamar o model a ser analisado  ```from .models import Cliente``` e excuar a query, no caso ```
     clientes = Cliente.objects.all()```
     
+## Aula 2
+ - Para lidar com inserção de usuarios é usado o django forms, disponível [aqui](https://docs.djangoproject.com/en/3.1/topics/forms/)
+ - Para cirar um usuario é preciso ter um formulario válido que valide os  dados, então é criado o arquivo _forms.py_ que contém os campos do formulário e os seus dados são validados de acordo com o banco de dados
+ - o formulário é então injetado no template com os parâmetros ```form = PersonForm(request.POST, request.FILES, None)``` onde o POST indica que só aeitará post e request.FILES indica que ele aceita arquivos
+ 
+ 
