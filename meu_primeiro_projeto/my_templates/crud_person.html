@@ -7,7 +7,10 @@
 <body>
     <ul>
     {% for cliente in clientes %}
-        <li><a href="{% url 'person_update' cliente.id %}">{{cliente.first_name}} {{cliente.last_name}}</a></li>
+        <li>
+            <a href="{% url 'person_update' cliente.id %}">{{cliente.first_name}} {{cliente.last_name}}</a>
+            <a href="{% url 'person_delete' cliente.id %}">deletar</a>
+        </li>
     {% endfor %}
     </ul>
 </body>

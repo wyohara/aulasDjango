@@ -14,3 +14,5 @@ from clientes import urls as clients_urls``` e dentro das urlpatterns adicionou 
  - Para aplicar o update basta criar uma url com o padrão ```cliente = get_object_or_404(Cliente, pk=id)``` de resto igual a classe person_new
  - Assim ao acessar a url de edição do cliente será prenchido com os dados do cliente, caso contrário será inserido novo usuario
  
+## Aula 4 
+ - para deletar basta usar ```cliente.delete()```
