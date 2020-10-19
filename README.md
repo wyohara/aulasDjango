@@ -12,4 +12,5 @@
 - ```wsgi.py``` é o startpoint do django, é a partir dele que começa o serviço web
 
 
-
+## Aula 2
+ - Estrutura de [urls do Django](https://docs.djangoproject.com/en/3.1/topics/http/urls/)

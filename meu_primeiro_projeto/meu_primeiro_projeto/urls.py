@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import hello, articles,find_name
 
 urlpatterns = [
+    path('articles/<int:year>', articles), # retornando o ano da url
+    path('hello/', hello), # httpresponse simples
+    path('pessoa/<str:nome>', find_name), # buscando uma pessoa no banco
     path('admin/', admin.site.urls),
 ]
